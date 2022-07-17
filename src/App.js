@@ -12,8 +12,8 @@ class App extends Component {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<PageAboutMe />} />
-          <Route path="/projects" element={<PageProjects />} />
+          <Route path="/Business_card" element={<PageAboutMe />} />
+          <Route path="/Business_card/projects" element={<PageProjects />} />
         </Routes>
         <Footer />
       </Router>

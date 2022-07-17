@@ -7,16 +7,16 @@ class Header extends Component {
         return (
             <Navbar bg="dark" variant="dark" sticky="top" className="mb-4" expand="lg">
                 <Container fluid="lg">
-                        <Navbar.Brand as={Link} to="/">
+                        <Navbar.Brand as={Link} to="/Business_card">
                             Timur Davydov
                         </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav defaultActiveKey="aboutme" className="ms-auto">
-                            <Nav.Link as={Link} to="/" eventKey="aboutme">
+                            <Nav.Link as={Link} to="/Business_card" eventKey="aboutme">
                                 Обо мне
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/projects" eventKey="projects">
+                            <Nav.Link as={Link} to="/Business_card/projects" eventKey="projects">
                                 Проекты
                             </Nav.Link>
                             <Nav.Link href="https://github.com/Koichi-hub">Github</Nav.Link>

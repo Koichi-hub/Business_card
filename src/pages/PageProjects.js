@@ -44,7 +44,7 @@ class PageProjects extends Component {
     render() {
         return (
             <Container className="projects my-4">
-                <Row>
+                <Row className="g-4">
                     <Col md={6} lg={4}>
                         <Card title="Визитка" github={''} show={''}>
                             <li>React</li>

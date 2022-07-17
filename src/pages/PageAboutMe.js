@@ -31,7 +31,7 @@ class PageAboutMe extends Component {
                         <Row>
                             <Col md={6}>
                                 <div className="photo">
-                                    <img className="img-fluid" src={"images/naruto.jpg"} alt="" />
+                                    <img className="img-fluid" src={require("../images/naruto.jpg")} alt="" />
                                     <span>Fullstack Developer</span>
                                 </div>
                             </Col>
@@ -163,7 +163,7 @@ class PageAboutMe extends Component {
                             Пусть за меня ответят мои проекты (<u>над которыми я буду работать пока не найду работу</u>).
                         </div>
                         <div className="d-flex justify-content-end mt-2">
-                            <Link to="/projects" className="btn-v1">К проектам</Link>
+                            <Link to="/Business_card/projects" className="btn-v1">К проектам</Link>
                         </div>
                     </Content>
                 </section>
@@ -173,19 +173,19 @@ class PageAboutMe extends Component {
                         <Row>
                             <Col md={6} lg={4}>
                                 <div className="coop-option">
-                                    <img className="img-fluid" src={"images/handshake.jpg"} alt="" />
+                                    <img className="img-fluid" src={require("../images/handshake.jpg")} alt="" />
                                     <span>Стартап</span>
                                 </div>
                             </Col>
                             <Col md={6} lg={4}>
                                 <div className="coop-option">
-                                    <img className="img-fluid" src={"images/job_handshake.jpg"} alt="" />
+                                    <img className="img-fluid" src={require("../images/job_handshake.jpg")} alt="" />
                                     <span>Работа или стажировка</span>
                                 </div>
                             </Col>
                             <Col md={6} lg={4}>
                                 <div className="coop-option">
-                                    <img className="img-fluid" src={"images/friendship_handshake.jpg"} alt="" />
+                                    <img className="img-fluid" src={require("../images/friendship_handshake.jpg")} alt="" />
                                     <span>Дружба</span>
                                 </div>
                             </Col>

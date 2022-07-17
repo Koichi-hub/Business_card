@@ -11,6 +11,9 @@
         line-height: 40px;
         font-size: 32px;
         font-weight: 700;
+        @media screen and (max-width: 576px) {
+            font-size: 1.5rem !important; 
+        }
     }
     .decor() {
         content: '';
@@ -34,12 +37,18 @@
 }
 .content {
     margin: 5rem 0;
+    @media screen and (max-width: 992px) {
+        margin: 2rem 0;
+    }
 }
 .photo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 768px) {
+        margin-bottom: 40px;
+    }
     img {
         border-radius: 100%;
     }
@@ -55,6 +64,9 @@
     justify-content: center;
     h1 {
         white-space: nowrap;
+        @media screen and (max-width: 576px) {
+            font-size: 2rem !important;
+        }
     }
     hr {
         width: 100%;
@@ -137,6 +149,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media screen and (max-width: 992px) {
+        margin: 20px 0;
+    }
     img {
         border-radius: 100%;
         width: 300px;
@@ -154,4 +169,8 @@
     margin: 40px 0;
     font-size: 20px;
     font-weight: 700;
+    @media screen and (max-width: 992px) {
+        margin: 20px 0;
+        font-size: 16px;
+    }
 }

@@ -18,13 +18,13 @@ class Footer extends Component {
                             <ul className="contacts">
                                 <span>Контакты</span>
                                 <li>
-                                    <a href="https://github.com/Koichi-hub">Github</a>
+                                    <a href="https://github.com/Koichi-hub" target="_blank" rel="noopener noreferrer">Github</a>
                                 </li>
                                 <li>
-                                    <a href="https://t.me/Koichi_hub">Telegram</a>
+                                    <a href="https://t.me/Koichi_hub" target="_blank" rel="noopener noreferrer">Telegram</a>
                                 </li>
                                 <li>
-                                    <a href="mailto:gogotimur2020@gmail.com">Gmail</a>
+                                    <a href="mailto:gogotimur2020@gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a>
                                 </li>
                             </ul>  
                         </Col>

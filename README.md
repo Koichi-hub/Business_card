@@ -3,5 +3,6 @@
 
 ### Стек
 - React, react-router-dom 
+- Axios
 - React-Bootstrap
 - LESS

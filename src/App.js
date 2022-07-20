@@ -7,12 +7,23 @@ import PageAboutMe from "./pages/PageAboutMe";
 import PageProjects from "./pages/PageProjects";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeKey: 'aboutme',
+    };
+  }
+  onChangeActiveKey = (activeKey) => {
+    this.setState({
+      activeKey,
+    });
+  };
   render() {
     return (
       <Router>
-        <Header />
+        <Header onChangeActiveKey={this.onChangeActiveKey} activeKey={this.state.activeKey} />
         <Routes>
-          <Route path="/Business_card" element={<PageAboutMe />} />
+          <Route path="/Business_card" element={<PageAboutMe onChangeActiveKey={this.onChangeActiveKey} />} />
           <Route path="/Business_card/projects" element={<PageProjects />} />
         </Routes>
         <Footer />

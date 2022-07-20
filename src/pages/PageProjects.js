@@ -1,30 +1,26 @@
 import React, { Component } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "../styles/PageProjects.less";
+import axios from "axios";
 
 const Card = (props) => {
     return (
         <div className="project-card">
             <div className="d-flex justify-content-between mb-2">
-                <time>2022</time>
+                <time>{props.card.date}</time>
                 <div className="card-stars">
-                    <a href={"https://github.com/Koichi-hub"}>0 stars</a>
+                    <a href={props.card.url}>{props.card.stars} stars</a>
                 </div>
             </div>
             <div className="p-card-info">
                 <div className="d-flex flex-column">
-                    <div className="p-card-title">{props.title}</div>
-                    <ul>
-                        {props.children}
-                    </ul>
+                    <div className="p-card-title">{props.card.name}</div>
+                    <div>{props.card.description}</div>
                 </div>
                 <div className="d-flex flex-column justify-content-end">
                     <div className="d-flex flex-column">
                         <div className="d-flex justify-content-end">
-                            <a href={props.github} className="card-btn">github</a>
-                        </div>
-                        <div className="d-flex justify-content-end">
-                            <a href={props.show} className="card-btn">демонстрация</a>
+                            <a href={props.card.url} className="card-btn" target="_blank" rel="noopener noreferrer">github</a>
                         </div>
                     </div>
                 </div>
@@ -34,9 +30,53 @@ const Card = (props) => {
 };
 
 class PageProjects extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            cards: [],
+        };
+    }
     componentDidMount = () => {
         const minHeight = window.innerHeight;
         document.getElementById('root').style.minHeight = minHeight + 'px';
+
+        const url = 'https://api.github.com/users/Koichi-hub/repos';
+
+        const resolve = (resp) => {
+            const repos = resp.data;
+
+            const formatDate = (date) => {
+                const year = date.getFullYear();
+                const month = date.getMonth() < 10 ? '0' + date.getMonth() : date.getMonth();
+                return {year, month};
+            };
+
+            const cards = repos.map(repo => {
+                const {year, month} = formatDate(new Date(repo.created_at));
+                const stars = repo.stargazers_count;
+                const name = repo.name;
+                const url = repo.html_url;
+                const description = repo.description ? repo.description : '';
+                
+                return {
+                    date: `${year}.${month}`,
+                    stars,
+                    name,
+                    url,
+                    description,
+                };
+            });
+
+            this.setState({
+                cards,
+            });
+        };
+
+        axios.get(url)
+            .then(resolve)
+            .catch()
+            .finally();
     };
     componentWillUnmount = () => {
         document.getElementById('root').style.minHeight = 0 + 'px';
@@ -45,22 +85,11 @@ class PageProjects extends Component {
         return (
             <Container className="projects my-4">
                 <Row className="g-4">
-                    <Col md={6} lg={4}>
-                        <Card title="Визитка" github={''} show={''}>
-                            <li>React</li>
-                            <li>Bootstrap</li>
-                            <li>LESS</li>
-                        </Card>
-                    </Col>
-                    <Col md={6} lg={4}>
-                        <Card title="Bekon" github={'https://github.com/Koichi-hub/Bekon'} show={''}>
-                            <li>Django</li>
-                            <li>Gunicorn</li>
-                            <li>Nginx</li>
-                            <li>PostgreSQL</li>
-                            <li>Docker</li>
-                        </Card>
-                    </Col>
+                    {this.state.cards.map(card => 
+                        <Col md={6} lg={4}>
+                            <Card card={card}></Card>
+                        </Col>
+                    )}
                 </Row>
             </Container>
         );

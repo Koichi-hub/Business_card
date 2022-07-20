@@ -163,7 +163,7 @@ class PageAboutMe extends Component {
                             Пусть за меня ответят мои проекты (<u>над которыми я буду работать пока не найду работу</u>).
                         </div>
                         <div className="d-flex justify-content-end mt-2">
-                            <Link to="/Business_card/projects" className="btn-v1">К проектам</Link>
+                            <Link to="/Business_card/projects" className="btn-v1" onClick={() => this.props.onChangeActiveKey("projects")}>К проектам</Link>
                         </div>
                     </Content>
                 </section>

@@ -23,8 +23,8 @@ class App extends Component {
       <Router>
         <Header onChangeActiveKey={this.onChangeActiveKey} activeKey={this.state.activeKey} />
         <Routes>
-          <Route path="/Business_card" element={<PageAboutMe onChangeActiveKey={this.onChangeActiveKey} />} />
-          <Route path="/Business_card/projects" element={<PageProjects />} />
+          <Route path="/" element={<PageAboutMe onChangeActiveKey={this.onChangeActiveKey} />} />
+          <Route path="/projects" element={<PageProjects />} />
         </Routes>
         <Footer />
       </Router>

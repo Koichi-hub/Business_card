@@ -7,19 +7,19 @@ class Header extends Component {
         return (
             <Navbar bg="dark" variant="dark" sticky="top" className="mb-4" expand="lg">
                 <Container fluid="lg">
-                    <Navbar.Brand as={Link} to="/Business_card" onClick={() => this.props.onChangeActiveKey("aboutme")}>
+                    <Navbar.Brand as={Link} to="/" onClick={() => this.props.onChangeActiveKey("aboutme")}>
                         Timur Davydov
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav activeKey={this.props.activeKey} onSelect={(selectedKey) => this.props.onChangeActiveKey(selectedKey)} className="ms-auto">
                             <Nav.Item>
-                                <Nav.Link as={Link} to="/Business_card" eventKey="aboutme">
+                                <Nav.Link as={Link} to="/" eventKey="aboutme">
                                     Обо мне
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link as={Link} to="/Business_card/projects" eventKey="projects">
+                                <Nav.Link as={Link} to="/projects" eventKey="projects">
                                     Проекты
                                 </Nav.Link>
                             </Nav.Item>

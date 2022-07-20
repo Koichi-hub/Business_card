@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.47398b6b.css",
-    "main.js": "/static/js/main.da71d24e.js",
+    "main.js": "/static/js/main.c0a25837.js",
     "static/media/handshake.jpg": "/static/media/handshake.5d2d95b2d0044b8e47ff.jpg",
     "static/media/friendship_handshake.jpg": "/static/media/friendship_handshake.8fd31c9bbf0b648c85d2.jpg",
     "static/media/naruto.jpg": "/static/media/naruto.3216034ab486c6d399db.jpg",
     "static/media/job_handshake.jpg": "/static/media/job_handshake.24c5ff1cdf12dc0874b2.jpg",
     "index.html": "/index.html",
     "main.47398b6b.css.map": "/static/css/main.47398b6b.css.map",
-    "main.da71d24e.js.map": "/static/js/main.da71d24e.js.map"
+    "main.c0a25837.js.map": "/static/js/main.c0a25837.js.map"
   },
   "entrypoints": [
     "static/css/main.47398b6b.css",
-    "static/js/main.da71d24e.js"
+    "static/js/main.c0a25837.js"
   ]
 }

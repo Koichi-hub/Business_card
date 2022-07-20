@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Business_card/static/css/main.47398b6b.css",
-    "main.js": "/Business_card/static/js/main.5ec3d7ec.js",
-    "static/media/handshake.jpg": "/Business_card/static/media/handshake.5d2d95b2d0044b8e47ff.jpg",
-    "static/media/friendship_handshake.jpg": "/Business_card/static/media/friendship_handshake.8fd31c9bbf0b648c85d2.jpg",
-    "static/media/naruto.jpg": "/Business_card/static/media/naruto.3216034ab486c6d399db.jpg",
-    "static/media/job_handshake.jpg": "/Business_card/static/media/job_handshake.24c5ff1cdf12dc0874b2.jpg",
-    "index.html": "/Business_card/index.html",
-    "main.47398b6b.css.map": "/Business_card/static/css/main.47398b6b.css.map",
-    "main.5ec3d7ec.js.map": "/Business_card/static/js/main.5ec3d7ec.js.map"
+    "main.css": "/static/css/main.47398b6b.css",
+    "main.js": "/static/js/main.9dfe76f5.js",
+    "static/media/handshake.jpg": "/static/media/handshake.5d2d95b2d0044b8e47ff.jpg",
+    "static/media/friendship_handshake.jpg": "/static/media/friendship_handshake.8fd31c9bbf0b648c85d2.jpg",
+    "static/media/naruto.jpg": "/static/media/naruto.3216034ab486c6d399db.jpg",
+    "static/media/job_handshake.jpg": "/static/media/job_handshake.24c5ff1cdf12dc0874b2.jpg",
+    "index.html": "/index.html",
+    "main.47398b6b.css.map": "/static/css/main.47398b6b.css.map",
+    "main.9dfe76f5.js.map": "/static/js/main.9dfe76f5.js.map"
   },
   "entrypoints": [
     "static/css/main.47398b6b.css",
-    "static/js/main.5ec3d7ec.js"
+    "static/js/main.9dfe76f5.js"
   ]
 }

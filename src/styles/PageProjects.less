@@ -15,9 +15,9 @@
     flex-direction: column;
     .card-stars {
         a {
-            color: #202020;
+            color: #202020 !important;
             &:hover {
-                color: #00f0ff;
+                color: #00f0ff !important;
             }
         }
     }
@@ -32,16 +32,16 @@
     }
     .card-btn {
         position: relative;
-        background-color: #202020;
-        line-height: 16px;
+        background-color: #202020 !important;
+        height: 30px;
         font-size: 14px;
         padding: 5px;
         margin: 4px 10px;
-        color: #00f0ff;
+        color: #00f0ff !important;
         font-weight: 700;
         text-transform: uppercase;
         &:hover {
-            color: #00f0ff;
+            color: red !important;
             text-decoration: none;
         }
         .decor() {
@@ -53,14 +53,14 @@
         }
         &::before {
             .decor();
-            border-right: 10px solid #202020;
-            border-top: 26px solid transparent;
+            border-right: 10px solid #202020 !important;
+            border-top: 30px solid transparent;
             left: -10px;
         }
         &::after {
             .decor();
-            border-left: 10px solid #202020;
-            border-bottom: 26px solid transparent;
+            border-left: 10px solid #202020 !important;
+            border-bottom: 30px solid transparent;
             right: -10px;
         }
     }

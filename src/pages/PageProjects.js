@@ -52,7 +52,11 @@ class PageProjects extends Component {
                 return {year, month};
             };
 
-            const cards = repos.map(repo => {
+            const hideReposNames = [
+                'Koichi-hub',
+            ];
+
+            const cards = repos.filter(repo => !hideReposNames.includes(repo.name)).map(repo => {
                 const {year, month} = formatDate(new Date(repo.created_at));
                 const stars = repo.stargazers_count;
                 const name = repo.name;
@@ -86,7 +90,7 @@ class PageProjects extends Component {
             <Container className="projects my-4">
                 <Row className="g-4">
                     {this.state.cards.map(card => 
-                        <Col md={6} lg={4}>
+                        <Col md={6} lg={4} key={card.name}>
                             <Card card={card}></Card>
                         </Col>
                     )}
